@@ -2,9 +2,9 @@
 const { json } = require("express");
 const { write } = require("fs");
 const fs = require("fs/promises");
-const path = require();
 
-const filepath= "./listdata.json";
+
+const filepath = "./listdata.json";
   // Make sure the file exists
   // Read the file
   // convert the buffer to a json object and return it
