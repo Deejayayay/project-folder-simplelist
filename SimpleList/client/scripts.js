@@ -16,7 +16,6 @@ delButton.addEventListener("click", httpDelete);
 /* Helper Functions */
 function ShowList() {
   let output = "<ul>";
-  console.log(theList);
   for (const itm of theList) {
     output += `<li>${itm}</li>`;
   }
@@ -28,7 +27,6 @@ function ShowList() {
 async function GetList() {
   try {
     const response = await http.get("http://localhost:5500/api");
-    console.log(response);
     theList = await response;
     ShowList();
   } catch (error) {
@@ -40,7 +38,6 @@ async function GetList() {
 async function WriteList() {
   try {
     const response = await http.post("http://localhost:5500/api", theList);
-    console.log(response);
   } catch (error) {
     console.log(error);
   }
@@ -67,10 +64,6 @@ function httpDelete(e) {
   else {
     console.log("Item not found");
   }
-  // e.preventDefault();
-  // theList.pop();
-  // ShowList();
-  // WriteList();
 }
 
 // Loading functions

@@ -14,7 +14,6 @@ app.use(express.json());
 //TODO GET and POST
 app.get("/api", async (req,res) => {
   const data = await fm.ReadData();
-  console.log(data);
   res.json(data);
 })
 

@@ -21,7 +21,8 @@ class coreHTTP {
     const reqOptions = {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      body: JSON.stringify(requestData)};
+      body: JSON.stringify(requestData)
+    };
     const response = await fetch(url, reqOptions);
     if (response.ok) {
       const responseData = await response.json();

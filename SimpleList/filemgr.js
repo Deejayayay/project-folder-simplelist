@@ -2,7 +2,7 @@
 const { json } = require("express");
 const { write } = require("fs");
 const fs = require("fs/promises");
-const path = require("path");
+const path = require();
 
 const filepath= "./listdata.json";
   // Make sure the file exists
@@ -14,7 +14,6 @@ async function ReadData() {
       return null;
     } else {
       const dataIn = await fs.readFile(filepath);
-      console.log(JSON.parse(dataIn));
       return JSON.parse(dataIn);
     }
   } catch (error) {
